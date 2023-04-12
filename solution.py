@@ -7,6 +7,7 @@ from hyppo.ksample import Energy, MMD, DISCO
 from scipy.stats import laplace, norm, ks_2samp, anderson_ksamp, cramervonmises_2samp
 from statsmodels.stats.weightstats import ztest
 from statsmodels.distributions.empirical_distribution import ECDF
+from scipy import stats
 
 chat_id = 5351182285 # Ваш chat ID, не меняйте название переменной
 
