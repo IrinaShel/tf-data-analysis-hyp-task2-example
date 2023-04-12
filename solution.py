@@ -16,6 +16,6 @@ def solution(x: np.array, y: np.array) -> bool:
     # Измените код этой функции
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
-    stat, pvalue = Energy().test(x, y)
+    stat, pvalue = MMD(compute_kernel=, **kwargs).test(x, y)
     Result = bool (pvalue<=0.06)
     return Result # Ваш ответ, True или False
