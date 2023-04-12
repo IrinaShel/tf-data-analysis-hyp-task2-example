@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import warnings
+from hyppo.ksample import Energy
 
 from hyppo.ksample import Energy, MMD, DISCO
 from scipy.stats import laplace, norm, ks_2samp, anderson_ksamp, cramervonmises_2samp
@@ -15,6 +16,6 @@ def solution(x: np.array, y: np.array) -> bool:
     # Измените код этой функции
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
-    res = stats.cramervonmises_2samp(x, y, method='exact')
-    Result = bool (res.pvalue<=0.06)
+    stat, pvalue = Energy().test(x, y)
+    Result = bool (pvalue<=0.06)
     return Result # Ваш ответ, True или False
