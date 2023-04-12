@@ -15,6 +15,6 @@ def solution(x: np.array, y: np.array) -> bool:
     # Измените код этой функции
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
-    res = stats.cramervonmises_2samp(x, y)
+    res = stats.cramervonmises_2samp(x, y, method='exact')
     Result = bool (res.pvalue<=0.06)
     return Result # Ваш ответ, True или False
